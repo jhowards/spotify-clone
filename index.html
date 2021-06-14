@@ -19,19 +19,18 @@
     <title>Spotify Clone</title>
 
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
       .sidebar {
         background-color: black;
-        height: 725px;
+        /* height: 725px; */
+        height: 85vh;
         width: 240px;
         position: fixed;
         z-index: 1000;
         color: rgb(166, 166, 166);
         padding-top: 25px;
         padding-left: 10px;
-        padding-right: 10px;
-        padding-bottom: 10px;
+        padding-right: 3px;
         font-family: "Montserrat", sans-serif;
       }
       .logo {
@@ -46,9 +45,9 @@
         padding: 0;
         font-size: 13px;
         font-weight: bold;
-        width: 80%;
         margin: 0;
         padding: 0;
+        line-height: 16px;
       }
       a {
         color: inherit;
@@ -75,20 +74,68 @@
       }
     
       .sidelistcurrent{
-        display: flex;
+          display: flex;
         height: 40px;
         width: 220px;
         border-radius: 4px;
         align-items: center;
-        background-color: #282828;
+        background-color: rgb(66, 66, 66);
       }
       .navitem {
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: 14px;
+        padding-right: 14px;
       }
-      .sidebarbreak{
-          color:white;
+
+      .sidebar hr{
+          background-color:rgb(70, 70, 70);
+          width:87%;
+          margin-top: 0.8rem;
+          margin-bottom: 0rem;
       }
+
+      .sidebar-playlists{
+          
+          list-style-type: none;
+          padding: 0;
+         font-size: 13px;
+          margin: 0;
+          padding: 0;
+          /* height: 350px; */
+          height:59%;
+          overflow-y: auto;
+      }
+
+      .sideplaylist{
+        margin-top: 0.8rem;
+        padding-left: 14px;
+        padding-right: 14px;
+        line-height: 20px;
+        font-size: 13px;
+        margin-bottom: 10px;
+        font-weight:500;
+        
+      }
+
+      #createicon{
+
+      }
+      #installapp{
+          position:absolute;
+          bottom: 0;
+          left: 0;
+          padding-left:15px;
+          font-weight:bold;
+          font-size: 13px;
+      }
+
+      ::-webkit-scrollbar {
+         width: 12px;
+        }
+
+::-webkit-scrollbar-thumb {
+    background-color:rgb(73, 73, 73);
+}
+     
     </style>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   </head>
@@ -104,23 +151,55 @@
       crossorigin="anonymous"
     ></script>
 
-    <div class="sidebar">
+    <div class="sidebar" style="position:relative;">
       <div class="sidebar-brand">
         <img class="logo" src="spotifylogo.svg" alt="Spotify Logo" />
       </div>
 
       <ul class="sidebar-nav flex-column">
-        <li class="sidelistcurrent"><a class="navitem" href="#"><span class="iconify mr-3" data-icon="el:home" data-inline="false" data-width="20px" data-height="20px"></span></span>Home</a></li>
+        <li class="sidelistcurrent"><a class="navitem" href="#"><span class="iconify mr-3" data-icon="el:home" data-inline="false" data-width="20px" data-height="20px"></span>Home</a></li>
         <li class="sidelist"><a class="navitem" href="#"><span class="iconify mr-3" data-icon="akar-icons:search" data-inline="false" data-width="20" data-height="20"></span>Search</a></li>
-        <li class="sidelist"><a class="navitem" href="#"><img style="height: 24px; width: 24px; margin:0; margin-right:12px" src="libraryicon.svg" alt="Library Icon" />Your Library</a></li>
+        <li class="sidelist"><a class="navitem" href="#"><img style="height: 24px; width: 24px; margin:0; margin-right:12px;" src="libraryicon.svg" alt="Library Icon" />Your Library</a></li>
         <br />
         <li class="sidelist">
-          <a class="navitem" href="#">Create Playlist</a>
+          <a class="navitem" href="#"><span id="createicon"></span>Create Playlist</a>
         </li>
         <li class="sidelist"><a class="navitem" href="#">Liked Songs</a></li>
       </ul>
 
-      <hr class="sidebarbreak"></hr>
+      <hr></hr>
+
+      <ul class="sidebar-playlists flex-column">
+        <li class="sideplaylist"><a class="playlistitem" href="#">Funky Heavy Bluesy</a></li>
+        <li class="sideplaylist"><a class="playlistitem" href="#">Your Top Songs 2020</a></li>
+        <li class="sideplaylist"><a class="playlistitem" href="#">In Love With You - Erykah B...</a>
+        <li class="sideplaylist"><a class="playlistitem" href="#">This Is Rod Stewart</a>    
+        <li class="sideplaylist"><a class="playlistitem" href="#">FRANCHISE ft. Young Thug ...</a>    
+        <li class="sideplaylist"><a class="playlistitem" href="#">Your Top Songs 2019</a>    
+        <li class="sideplaylist"><a class="playlistitem" href="#">Palleggio</a>    
+        <li class="sideplaylist"><a class="playlistitem" href="#">This Is Joe Bonamassa</a>    
+        <li class="sideplaylist"><a class="playlistitem" href="#">Jun19</a>    
+        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party 2</a>    
+        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
+        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
+        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
+        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
+        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
+        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
+        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
+        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
+        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
+        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
+        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
+       
+        
+        
+        
+        </li>
+        
+        
+      </ul>
+      <p id="installapp"> <span class="iconify mr-2" data-icon="bi:arrow-down-circle" data-inline="false" data-width="20" data-height="20"></span>Install App</p>
     </div>
   </body>
 </html>
