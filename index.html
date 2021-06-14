@@ -17,13 +17,82 @@
     />
 
     <title>Spotify Clone</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+      .sidebar {
+        background-color: black;
+        height: 725px;
+        width: 240px;
+        position: fixed;
+        z-index: 1000;
+        color: rgb(166, 166, 166);
+        padding-top: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        font-family: "Montserrat", sans-serif;
+      }
+      .logo {
+        height: 40px;
+        filter: invert(100%);
+        margin-left: 12px;
+        margin-bottom: 25px;
+      }
+
+      .sidebar-nav {
+        list-style-type: none;
+        padding: 0;
+        font-size: 13px;
+        font-weight: bold;
+        width: 80%;
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        color: inherit;
+      }
+      a:hover {
+        color: inherit;
+        text-decoration: none;
+      }
+      .sidelist {
+        display: flex;
+        height: 40px;
+        width: 220px;
+        border-radius: 4px;
+        align-items: center;
+      }
+
+      .sidelist:hover {
+        display: flex;
+        height: 40px;
+        width: 220px;
+        
+        border-radius: 4px;
+        color:white;
+      }
+    
+      .sidelistcurrent{
+        display: flex;
+        height: 40px;
+        width: 220px;
+        border-radius: 4px;
+        align-items: center;
+        background-color: #282828;
+      }
+      .navitem {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+      .sidebarbreak{
+          color:white;
+      }
+    </style>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   </head>
   <body>
-    <h1>Hello, world!</h1>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -34,5 +103,24 @@
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
+
+    <div class="sidebar">
+      <div class="sidebar-brand">
+        <img class="logo" src="spotifylogo.svg" alt="Spotify Logo" />
+      </div>
+
+      <ul class="sidebar-nav flex-column">
+        <li class="sidelistcurrent"><a class="navitem" href="#"><span class="iconify mr-3" data-icon="el:home" data-inline="false" data-width="20px" data-height="20px"></span></span>Home</a></li>
+        <li class="sidelist"><a class="navitem" href="#"><span class="iconify mr-3" data-icon="akar-icons:search" data-inline="false" data-width="20" data-height="20"></span>Search</a></li>
+        <li class="sidelist"><a class="navitem" href="#"><img style="height: 24px; width: 24px; margin:0; margin-right:12px" src="libraryicon.svg" alt="Library Icon" />Your Library</a></li>
+        <br />
+        <li class="sidelist">
+          <a class="navitem" href="#">Create Playlist</a>
+        </li>
+        <li class="sidelist"><a class="navitem" href="#">Liked Songs</a></li>
+      </ul>
+
+      <hr class="sidebarbreak"></hr>
+    </div>
   </body>
 </html>
