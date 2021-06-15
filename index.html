@@ -37,15 +37,20 @@
             border-radius: 50px;
             margin-bottom: 10px;
             min-width: 30em;
+            padding: 1rem;
+            margin: -3px;
         }
 
         .btn-apple {
             background-color: black;
         }
 
+
         .btn-signup {
             font-weight: 600;
             letter-spacing: 1px;
+            border: 2px solid;
+            margin-top: 1rem;
         }
 
         .btn-login {
@@ -53,6 +58,8 @@
             padding: 10px 70px 10px 70px;
             font-weight: 600;
         }
+
+
 
 
 
@@ -106,12 +113,26 @@
         <h6 class="bold font-weight-bold "> To continue log in, to spotify.</h6>
 
         <div class="d-flex flex-column">
-            <div class="p-2 bd-highlight"><button type="button" class="btn btn-primary btn-facebook"><i
-                        class="bi bi-facebook"></i>continue with
-                    facebook</button></div>
-            <div class="p-2 bd-highlight"> <button type="button" class="btn text-white btn-apple"><span
-                        class="iconify bg-white mr-3" data-icon="logos:apple" data-inline="false"></span>continue with
-                    apple</button></div>
+
+            <div class="p-2 bd-highlight">
+
+                <a href="#"><button type="button" class="btn btn-primary btn-facebook"><i
+                            class="bi bi-facebook"></i>Continue with Facebook</button></div></a>
+
+            <div class="p-2 bd-highlight">
+
+                <a href="#"><button type="button" class="btn text-white btn-apple"><span class="iconify bg-white mr-3"
+                            data-icon="logos:apple" data-inline="false"></span>continue with
+                        apple</button></a>
+
+            </div>
+
+            <div class="p-2 bd-highlight">
+
+                <a href="#"><button type="button" class="btn border border-2 bg-transparent btn-facebook"><i
+                            class="bi bi-facebook"></i>continue with
+                        Google</button></a>
+            </div>
         </div>
 
         <div class="separator text-muted">OR</div>
@@ -129,7 +150,7 @@
                 <span class="text-muted "><input class="mr-1" type="checkbox"> Remember me</span>
 
 
-                <button type="button" class="btn btn-primary btn-login">LOG IN</button>
+                <button type="button" class="btn btn-success btn-login">LOG IN</button>
             </div>
 
 
@@ -137,12 +158,15 @@
             <a class="text-success" href="#">Forgot your password?</a>
         </form>
 
-        <hr class="line-size">
+        <div class="mt-5">
+            <hr class="line-size">
 
-        <h6 class="bold font-weight-bold">Don't have an account?</h6>
+            <h6 class="bold font-weight-bold mt-5">Don't have an account?</h6>
 
-        <button type="button" class="btn btn-signup btn-primary bg-transparent text-muted">Sign up for
-            spotify</button>
+            <button type="button" class="btn btn-signup bg-transparent text-muted">Sign up for
+                spotify</button>
+
+        </div>
 
         <hr class="line-size">
 
