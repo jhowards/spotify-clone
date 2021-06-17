@@ -20,6 +20,8 @@
 
     <title>Spotify Clone</title>
 
+    
+
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
@@ -28,6 +30,8 @@ body{
     margin: 0px;
     font-family: "Montserrat", sans-serif;
 }
+
+    
       .sidebar {
         background-color: black;
         color: rgb(166, 166, 166);
@@ -38,7 +42,7 @@ body{
         display: flex;
          flex-direction: column;
          height: 100%;
-         width: 13vw;
+         min-width: 13vw;
         
       }
       .logo {
@@ -188,14 +192,25 @@ body{
         }
 
         .mainbackground{
-            height:35vh;
-            background: rgb(61,7,7);
-            background: linear-gradient(180deg, rgba(61,7,7,1) 36%, rgba(61,7,7,0.7679446778711485) 51%, rgba(165,153,221,0) 100%);
+            height:40vh;
+            background: rgb(163,57,132);
+            background: linear-gradient(180deg, rgba(163,57,132,1) 29%, rgba(87,31,71,1) 80%);
             z-index: -1;
             position: absolute;
-                top: 0;
-                left: 0;
-                padding:0;
+             top: 0;
+           left: 0;
+           padding:0;
+        }
+
+        .mainbackground2{
+             height:30vh;
+            background: rgb(66,23,54);
+            background: linear-gradient(180deg, rgba(66,23,54,0.9108018207282913) 53%, rgba(66,23,54,0.24693627450980393) 68%, rgba(66,23,54,0.07886904761904767) 79%, rgba(66,23,54,0) 87%);
+            z-index: -1;
+            position: absolute;
+             top: 40vh;
+            left: 0;
+             padding:0;
         }
 
         .mainbody{
@@ -248,17 +263,16 @@ body{
 
         .left{
           transform: rotate(135deg);
-           -webkit-transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
           left: 1.28vh;
   
         }
 
         .right{
           transform: rotate(-45deg);
-          -webkit-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
           right: 1.28vh;
         }
-      
         .cardimage{
           border-top-left-radius: .25rem;
           border-bottom-left-radius: .25rem;
@@ -272,7 +286,7 @@ body{
           padding:0;
           flex-direction:row;
         }
-        .stickynav{
+        .navbar-fixed-top{
           position:fixed;
           height:5%;
           padding-top: 1.5vh;
@@ -282,6 +296,11 @@ body{
           padding-bottom: 50px;
         }
 
+        .nav-active {
+          background-color:#fff;
+          box-shadow: 5px -1px 12px -5px grey;
+        }
+        
         .bodycontent{
           margin-top: 75px;
         }
@@ -336,8 +355,7 @@ body{
         display:block;
         overflow: hidden;
         text-overflow: ellipsis;
-        padding-right: 30px;
-          
+    
         }
 
         .downarrow{
@@ -345,37 +363,6 @@ body{
           right:11px;
           top:10px;
         }
-
-        .personimage{
-          margin-top:2px;
-          margin-left:2px;
-          color:grey;
-        }
-
-        .persontext{
-          font-weight:bold;
-          font-size: 13px;
-          margin-left:4px;
-          color:white;
-          vertical-align: middle;
-          margin-right: 20px;
-        }
-
-        .morningcard{
-          border: 0;
-        }
-        
-        .morningimg{
-          height: 100%;
-          object-fit:cover;
-          max-height:80px;
-          min-height: 80px;
-          /* max-width:80px; */
-
-        }
-
-        
-
 
         /* Max's Footer CSS */
         /*           */
@@ -601,7 +588,87 @@ body{
                 opacity:1;
             }
 
+                  /* Album Page */
+                /*           */
+                /*           */
+                /*           */
+                /*           */
+                /*           */
 
+                .albumcoverbox{
+                    height:40vh;
+                    background: rgb(163,57,132);
+                    background: linear-gradient(180deg, rgba(163,57,132,1) 29%, rgba(87,31,71,1) 80%);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding:0;
+                    
+                }
+
+            .bohemian{
+                max-width: 15%;
+                min-height: 15%;
+                padding: 0;
+                border:none;
+                margin-left: 10px;
+                box-shadow: 0 4px 60px rgb(0 0 0 / 50%);
+                margin-right: 20px;
+                float:left;
+            }
+            .albumcovertext{
+                color:white;
+                font-family: "Montserrat", sans-serif;
+                font-weight: bold;
+            }
+
+            .albumcovertextsmall{
+                font-size:13px; 
+                font-weight: 600;
+                color:rgb(207, 207, 207);
+            }
+            .covertextbox{
+                margin-top:auto;
+            }
+            .coverbox{
+                display: flex;
+                flex-direction: row;
+            }
+
+            .albumtableheader{
+                color:rgb(173, 173, 173);
+                font-size: 12px;
+           
+            }
+         
+
+            .titletext{
+                font-weight:bold;
+                color:white;
+                font-size:15px;
+            }
+
+            .alttext{
+                color:rgb(156, 156, 156);
+                text-align:center;
+                font-size:14px;
+                font-weight: 600;
+            }
+
+            .table td, .table th{
+                border-top:none;
+            }
+            .table thead th{
+                border-bottom: 1px solid #979797;
+                padding-bottom: 8px;
+            }
+
+            .playbutton{
+                width: 50px;
+                height: 50px;
+                background-color: rgb(65, 155, 65);
+                border-radius:50%;
+            }
     </style>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   </head>
@@ -616,6 +683,7 @@ body{
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
+
 
 
    <div class="container-fluid flexbody">
@@ -661,18 +729,22 @@ body{
         <li class="sideplaylist"><a class="playlistitem" href="#">New Playlist</a>    
         <li class="sideplaylist"><a class="playlistitem" href="#">Your Top Songs 2018</a>    
         <li class="sideplaylist"><a class="playlistitem" href="#">Jazz Classics Blue Note Editi</a>    
-        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
-        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
-        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
-        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
-        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
-        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
-        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
-        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
-        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
-        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
-        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
-        <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party</a>    
+            <li class="sideplaylist"><a class="playlistitem" href="#">Funky Heavy Bluesy</a></li>
+            <li class="sideplaylist"><a class="playlistitem" href="#">Your Top Songs 2020</a></li>
+            <li class="sideplaylist"><a class="playlistitem" href="#">In Love With You - Erykah Badu</a>
+            <li class="sideplaylist"><a class="playlistitem" href="#">This Is Rod Stewart</a>    
+            <li class="sideplaylist"><a class="playlistitem" href="#">FRANCHISE ft. Young Thug & M.I.A.</a>    
+            <li class="sideplaylist"><a class="playlistitem" href="#">Your Top Songs 2019</a>    
+            <li class="sideplaylist"><a class="playlistitem" href="#">Palleggio</a>    
+            <li class="sideplaylist"><a class="playlistitem" href="#">This Is Joe Bonamassa</a>    
+            <li class="sideplaylist"><a class="playlistitem" href="#">Jun19</a>    
+            <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party 2 <span class="iconify" data-icon="ion:people-outline" data-inline="false" style="float:right;" data-width="20px" data-height="20px"></span></a>    
+            <li class="sideplaylist"><a class="playlistitem" href="#">Jack 30th Party <span class="iconify" data-icon="ion:people-outline" data-inline="false" style="float:right;" data-width="20px" data-height="20px"></span></a>    
+            <li class="sideplaylist"><a class="playlistitem" href="#">This Is Opeth</a>    
+            <li class="sideplaylist"><a class="playlistitem" href="#">Metal Ballads</a>    
+            <li class="sideplaylist"><a class="playlistitem" href="#">New Playlist</a>    
+            <li class="sideplaylist"><a class="playlistitem" href="#">Your Top Songs 2018</a>    
+            <li class="sideplaylist"><a class="playlistitem" href="#">Jazz Classics Blue Note Editi</a>   
        
         
         </li>
@@ -689,276 +761,97 @@ body{
 
 
     <div class="container-fluid mainbackground"></div>
+    <div class="container-fluid mainbackground2"></div>
 
     <div class="container-fluid mainbody">
-      <div class="stickynav">
-        <div class="navcontent">
-          <div class="arrows">
-            <!-- <span class="iconify mr-2" data-icon="mdi:chevron-left-circle" data-inline="false" data-width="34" data-height="34"></span>
-            <span class="iconify" data-icon="akar-icons:circle-chevron-right-fill" data-inline="false" data-width="34" data-height="34"></span> -->
-            <div class="circle mr-3">
-              <div class="arrow left">
+        <div class="navbar-fixed-top ml-2">
+          <div class="navcontent">
+            <div class="arrows">
+              <div class="circle mr-3">
+                <div class="arrow left">
 
+                </div>
+              </div>
+              <div class="circle">
+                <div class="arrow right">
+
+                </div>
               </div>
             </div>
-            <div class="circle">
-              <div class="arrow right">
 
-              </div>
+            <div class="useraccount">
+              <span class="iconify personimage" data-icon="bi:person-circle" data-inline="false" data-width="26" data-height="26"></span>
+              <span class="persontext">User Name</span>
+              <span class="iconify downarrow" data-icon="bx:bxs-down-arrow" data-inline="true" style="color: white;" data-width="10" data-height="10"></span>
             </div>
           </div>
-
-          <div class="useraccount">
-            <span class="iconify personimage" data-icon="bi:person-circle" data-inline="false" data-width="26" data-height="26"></span>
-            <span class="persontext">User Name</span>
-            <span class="iconify downarrow" data-icon="bx:bxs-down-arrow" data-inline="true" style="color: white;" data-width="10" data-height="10"></span>
-          </div>
-        </div>
-        
-        
           
-      </div>
+          
+            
+        </div>
 
         <div class="container-fluid bodycontent pl-4">
-        <p class="morningtext">Good morning</p>
+                
+          <div class="container-fluid p-0 coverbox" >
+            <img src="/Bohemian_Rhapsody_album.jpg" class="img-fluid bohemian" alt="Bohemian Rhapsody Album Cover">
+            <div class="covertextbox">
+                <h5 class="albumcovertext" style="font-size:13px;">ALBUM</h5>
+                <h1 class="albumcovertext">Bohemian Rhapsody (The Original Soundtrack)</h1>
+                <span class="albumcovertext mr-2" style="font-size:13px;">Queen</span><span class="albumcovertextsmall">• 2018 • 22 songs, 1 hr 19 min</span>
+            </div>
+       
+          </div>
+
            
-    
+        
+            </div>
+         <br/>
+         <div class="playbutton"></div>
+         <br/>
 
-         
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-5">
-            <div class="col pr-2">
-            <div class="card morningcard mb-3">
-              <div class="row no-gutters">
-                <div class="col-md-3">
-                  <img class="card-img morningimg" src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/artistic-album-cover-design-template-d12ef0296af80b58363dc0deef077ecc_screen.jpg?ts=1561488440" alt="...">
-                </div>
-                <div class="col-md-9">
-                  <div class="card-body ml-2">
-                    <p class="card-text" style="margin:auto; margin-left:4px;">Burning Jazz-rock Fusion</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col pr-2">
-            <div class="card morningcard mb-3">
-              <div class="row no-gutters">
-                <div class="col-md-3">
-                  <img class="card-img morningimg" src="/likedsongs.jpeg" alt="...">
-                </div>
-                <div class="col-md-9">
-                  <div class="card-body ml-2">
-                    <p class="card-text" style="margin:auto; margin-left:4px;">Liked Songs</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col pr-2">
-            <div class="card morningcard mb-3">
-              <div class="row no-gutters">
-                <div class="col-md-3">
-                  <img class="card-img morningimg" src="https://i.scdn.co/image/ab67706f000000036f39cc1479a845dcc9e7c54b" alt="...">
-                </div>
-                <div class="col-md-9">
-                  <div class="card-body ml-2">
-                    <p class="card-text" style="margin:auto; margin-left:4px;">Metal Ballads</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col pr-2">
-            <div class="card morningcard mb-3">
-              <div class="row no-gutters">
-                <div class="col-md-3">
-                  <img class="card-img morningimg" src="https://i.scdn.co/image/ab67706f000000036f39cc1479a845dcc9e7c54b" alt="...">
-                </div>
-                <div class="col-md-9">
-                  <div class="card-body ml-2">
-                    <p class="card-text" style="margin:auto; margin-left:4px;">POST HUMAN: SURVIVAL</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+   <div class="container-fluid">
 
-          <div class="col pr-2">
-            <div class="card morningcard mb-3">
-              <div class="row no-gutters">
-                <div class="col-md-3">
-                  <img class="card-img morningimg" src="https://i.scdn.co/image/ab67706f000000036f39cc1479a845dcc9e7c54b" alt="...">
-                </div>
-                <div class="col-md-9">
-                  <div class="card-body ml-2">
-                    <p class="card-text" style="margin:auto; margin-left:4px;">This Is Joe Bonamassa</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+   </div>
+          <div class="table-responsive ml-2">
+            <table class="table table-hover">
+                <caption style="font-size: 11px; color:rgb(153, 153, 153);">© 2018 Queen Productions Ltd, under exclusive licence to Universal International Music BV
+                    <br/>
+                    ℗ A Virgin Records Release; This Compilation ℗ 2018 Queen Productions Ltd, under exclusive licence to Universal International Music BV</caption>
+                <thead class="albumtableheader">
+                  <tr>
+                    <th scope="col" style="width:30px; font-size: 16px; padding-bottom: 5px;">#</th>
+                    <th scope="col" style="width:90%;">TITLE</th>
+                    <th scope="col" style="text-align: center;"><span class="iconify" data-icon="fluent:clock-28-regular" data-inline="false" style="color: rgb(184, 184, 184);" data-width="16" data-height="16"></span></th>
+                  </tr>
+                </thead>
+                <tbody class="">
+                  <tr>
+                    <th scope="row" class="alttext" style="padding-top:35px;">1</th>
+                    <td class="titletext" style="padding-top:35px;">20th Century Fox Fanfare <br/> <span class="alttext">Queen</span></td>
+                    <td class="alttext" style="padding-top:35px;">0:25</td>
+                  </tr>
+                  <tr>
+                    <th class="alttext" scope="row">2</th>
+                    <td class="titletext">Somebody To Love <br/> <span class="alttext">Queen</span></td>
+                    <td class="alttext">4:55</td>
+                  </tr>
+                  <tr>
+                    <th class="alttext" scope="row">3</th>
+                    <td class="titletext">Doing All Right - ...Revisited <br/> <span class="alttext">Smile</span></td>
+                    <td class="alttext">3:16</td>
+                  </tr>
+                </tbody>
+
+            </table>
           </div>
-          <div class="col pr-2">
-            <div class="card morningcard mb-3">
-              <div class="row no-gutters">
-                <div class="col-md-3">
-                  <img class="card-img morningimg" src="https://i.scdn.co/image/ab67706f000000036f39cc1479a845dcc9e7c54b" alt="...">
-                </div>
-                <div class="col-md-9">
-                  <div class="card-body ml-2">
-                    <p class="card-text" style="margin:auto; margin-left:4px;">Midian</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col pr-2">
-            <div class="card morningcard mb-3">
-              <div class="row no-gutters">
-                <div class="col-md-3">
-                  <img class="card-img morningimg" src="https://i.scdn.co/image/ab67706f000000036f39cc1479a845dcc9e7c54b" alt="...">
-                </div>
-                <div class="col-md-9">
-                  <div class="card-body ml-2">
-                    <span class="card-text" style="margin:auto; margin-left:4px;">Nymphetamine</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col pr-2">
-            <div class="card morningcard mb-3">
-              <div class="row no-gutters">
-                <div class="col-md-3">
-                  <img class="card-img morningimg" src="https://i.scdn.co/image/ab67706f000000036f39cc1479a845dcc9e7c54b" alt="...">
-                </div>
-                <div class="col-md-9">
-                  <div class="card-body ml-2">
-                    <p class="card-text" style="margin:auto; margin-left:4px;">amo</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col pr-2">
-            <div class="card morningcard mb-3">
-              <div class="row no-gutters">
-                <div class="col-md-3">
-                  <img class="card-img morningimg" src="https://i.scdn.co/image/ab67706f000000036f39cc1479a845dcc9e7c54b" alt="...">
-                </div>
-                <div class="col-md-9">
-                  <div class="card-body ml-2">
-                    <p class="card-text" style="margin:auto; margin-left:4px;">LE BASK</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col pr-2">
-            <div class="card morningcard mb-3">
-              <div class="row no-gutters">
-                <div class="col-md-3">
-                  <img class="card-img morningimg" src="https://i.scdn.co/image/ab67706f000000036f39cc1479a845dcc9e7c54b" alt="...">
-                </div>
-                <div class="col-md-9">
-                  <div class="card-body ml-2">
-                    <p class="card-text" style="margin:auto; margin-left:4px;">Opeth</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-              
-          
-        </div>
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
-        <br/>  
+        
+
     </div>
   </div>
 
-  
+
+
+  <!-- FOOTER -->
   <section class="music-controls container-fluid justify-content-center">
     <div class="row music-controls-row justify-content-center;">
         <div class="col col-lg-1 m-controls_album-image">
