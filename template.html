@@ -20,6 +20,8 @@
 
     <title>Spotify Clone</title>
 
+    
+
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
@@ -28,6 +30,8 @@ body{
     margin: 0px;
     font-family: "Montserrat", sans-serif;
 }
+
+    
       .sidebar {
         background-color: black;
         color: rgb(166, 166, 166);
@@ -225,8 +229,38 @@ body{
            display: flex;
            height:100%;
         }
+        .circle{
+          position:relative;
+          height: 3.5vh;
+          width: 3.5vh;
+          background-color: rgb(0, 0, 0);
+          border-radius: 50%;
+          opacity: 60%;
+          display: inline-block;
+        }
+        
+        .arrow{
+          border: solid white;
+          border-width: 0 3px 3px 0;
+          display: inline-block;
+          padding: 0.6vh;
+          border-radius:3px;
+          position:absolute;
+          top: 9px;
+        }
 
-      
+        .left{
+          transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+          left: 12px;
+  
+        }
+
+        .right{
+          transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          right: 12px;
+        }
         .cardimage{
           border-top-left-radius: .25rem;
           border-bottom-left-radius: .25rem;
@@ -240,7 +274,7 @@ body{
           padding:0;
           flex-direction:row;
         }
-        .stickynav{
+        .navbar-fixed-top{
           position:fixed;
           height:5%;
           padding-top: 1.5vh;
@@ -250,6 +284,11 @@ body{
           padding-bottom: 50px;
         }
 
+        .nav-active {
+          background-color:#fff;
+          box-shadow: 5px -1px 12px -5px grey;
+        }
+        
         .bodycontent{
           margin-top: 75px;
         }
@@ -259,6 +298,16 @@ body{
           height:30px;
           border-radius: 25px;
           background-color: RGBA(0,0,0,0.70);
+          position: relative;
+         
+        }
+
+        .navcontent{
+          width:80vw;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+         
         }
 
         .personimage{
@@ -297,6 +346,11 @@ body{
     
         }
 
+        .downarrow{
+          position:absolute;
+          right:11px;
+          top:10px;
+        }
 
         /* Max's Footer CSS */
         /*           */
@@ -522,7 +576,7 @@ body{
                 opacity:1;
             }
 
-
+            
     </style>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   </head>
@@ -537,6 +591,7 @@ body{
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
+
 
 
    <div class="container-fluid flexbody">
@@ -616,17 +671,27 @@ body{
     <div class="container-fluid mainbackground"></div>
 
     <div class="container-fluid mainbody">
-        <div class="stickynav">
-          <div class="navcontent d-flex justify-content-between">
+        <div class="navbar-fixed-top">
+          <div class="navcontent">
             <div class="arrows">
-              <span class="iconify mr-2" data-icon="mdi:chevron-left-circle" data-inline="false" data-width="34" data-height="34"></span>
-              <span class="iconify" data-icon="akar-icons:circle-chevron-right-fill" data-inline="false" data-width="34" data-height="34"></span>
+              <!-- <span class="iconify mr-2" data-icon="mdi:chevron-left-circle" data-inline="false" data-width="34" data-height="34"></span>
+              <span class="iconify" data-icon="akar-icons:circle-chevron-right-fill" data-inline="false" data-width="34" data-height="34"></span> -->
+              <div class="circle mr-3">
+                <div class="arrow left">
+
+                </div>
+              </div>
+              <div class="circle">
+                <div class="arrow right">
+
+                </div>
+              </div>
             </div>
 
             <div class="useraccount">
               <span class="iconify personimage" data-icon="bi:person-circle" data-inline="false" data-width="26" data-height="26"></span>
               <span class="persontext">User Name</span>
-              <span class="iconify" data-icon="bx:bxs-down-arrow" data-inline="true" style="color: white;" data-width="10" data-height="10"></span>
+              <span class="iconify downarrow" data-icon="bx:bxs-down-arrow" data-inline="true" style="color: white;" data-width="10" data-height="10"></span>
             </div>
           </div>
           
@@ -637,7 +702,24 @@ body{
         <div class="container-fluid bodycontent pl-4">
        
            
-    
+          <img src="https://fakeimg.pl/300/">
+          <img src="https://fakeimg.pl/300/">
+          <img src="https://fakeimg.pl/300/">
+          <img src="https://fakeimg.pl/300/">
+          <img src="https://fakeimg.pl/300/">
+          <img src="https://fakeimg.pl/300/">
+          <img src="https://fakeimg.pl/300/">
+          <img src="https://fakeimg.pl/300/">
+          <img src="https://fakeimg.pl/300/">
+          <img src="https://fakeimg.pl/300/">
+          <img src="https://fakeimg.pl/300/">
+          <img src="https://fakeimg.pl/300/">
+          <img src="https://fakeimg.pl/300/">
+          <img src="https://fakeimg.pl/300/">
+          <img src="https://fakeimg.pl/300/">
+          <img src="https://fakeimg.pl/300/">
+          <img src="https://fakeimg.pl/300/">
+          <img src="https://fakeimg.pl/300/">
 
          
           
