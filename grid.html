@@ -17,8 +17,8 @@
             background-color: rgb(19, 18, 18);
         }
 
-        .grid1 {
-            text-overflow: ellipsis;
+        .card-title{
+            font-size: 15px;
         }
     </style>
 </head>
@@ -28,9 +28,14 @@
     <div class="container-fluid mt-5">
 
         <section>
-            <h5 class="font-weight-bold text-white mb-4 ">Recently played</h5>
 
-            <div class="row row-cols-lg-auto text-white">
+            <div class=" d-flex align-items-center justify-content-between">
+                <h5 class="font-weight-bold text-white ">Recently played</h5>
+                <small class="text-white font-weight-bold text-muted">SEE ALL</small>
+            </div>
+    
+
+            <div class="row row-cols-lg-auto text-white mt-3">
                 <div class="col mb-4">
                     <div class="card p-2 bg-dark">
                         <img src="https://picsum.photos/100" class="card-img-top" alt="...">
@@ -115,17 +120,18 @@
 
         </section>
 
-
-
-
-
-        <h5 class="font-weight-bold text-white">Shows to try</h5>
-
-        <small class="text-white font-weight-bold vw-100">Podcasts we think you'll get hooked on.</small>
         <section>
-            <h5 class="font-weight-bold text-white mb-4 ">Recently played</h5>
+
+            <div class="d-flex align-items-center justify-content-between">
+
+                <h5 class="font-weight-bold text-white">Shows to try</h5>
+                <small class="text-white font-weight-bold text-muted">SEE ALL</small>
+
+            </div>
+            <small class="text-white font-weight-bold vw-100">Podcasts we think you'll get hooked on.</small>
+
     
-            <div class="row row-cols-lg-auto text-white">
+            <div class="row row-cols-lg-auto text-white mt-3 ">
                 <div class="col mb-4">
                     <div class="card p-2 bg-dark">
                         <img src="https://picsum.photos/100" class="card-img-top" alt="...">
