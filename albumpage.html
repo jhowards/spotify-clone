@@ -23,7 +23,7 @@
     
 
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap');
 
 body{ 
     background-color:rgb(18,18,18);
@@ -97,7 +97,6 @@ body{
       .sidelistcurrent:hover{
         display: flex;
         height: 40px;
-        width: 220px;
         border-radius: 4px;
         align-items: center;
         background-color: rgb(66, 66, 66);
@@ -191,33 +190,15 @@ body{
         color:white;
         }
 
-        .mainbackground{
-            height:40vh;
-            background: rgb(163,57,132);
-            background: linear-gradient(180deg, rgba(163,57,132,1) 29%, rgba(87,31,71,1) 80%);
-            z-index: -1;
-            position: absolute;
-             top: 0;
-           left: 0;
-           padding:0;
-        }
 
-        .mainbackground2{
-             height:30vh;
-            background: rgb(66,23,54);
-            background: linear-gradient(180deg, rgba(66,23,54,0.9108018207282913) 53%, rgba(66,23,54,0.24693627450980393) 68%, rgba(66,23,54,0.07886904761904767) 79%, rgba(66,23,54,0) 87%);
-            z-index: -1;
-            position: absolute;
-             top: 40vh;
-            left: 0;
-             padding:0;
-        }
 
         .mainbody{
           padding-left:0;
             margin-left:0;
             overflow:auto;
-            padding-right:10px;;
+            padding-right:10px;
+            overflow-x:hidden;
+
            }
         
         .morningtext{
@@ -301,10 +282,6 @@ body{
           box-shadow: 5px -1px 12px -5px grey;
         }
         
-        .bodycontent{
-          margin-top: 75px;
-        }
-
         .useraccount{
           width:185px;
           height:30px;
@@ -595,80 +572,119 @@ body{
                 /*           */
                 /*           */
 
-                .albumcoverbox{
-                    height:40vh;
+                .covercontent{
+                    height:37vh;
                     background: rgb(163,57,132);
                     background: linear-gradient(180deg, rgba(163,57,132,1) 29%, rgba(87,31,71,1) 80%);
-                    position: absolute;
-                    top: 0;
-                    left: 0;
                     padding:0;
-                    
+                    display:flex;
+                    width:87vw;
+                    margin: 0;
                 }
 
-            .bohemian{
-                max-width: 15%;
-                min-height: 15%;
-                padding: 0;
-                border:none;
-                margin-left: 10px;
-                box-shadow: 0 4px 60px rgb(0 0 0 / 50%);
-                margin-right: 20px;
-                float:left;
-            }
-            .albumcovertext{
-                color:white;
-                font-family: "Montserrat", sans-serif;
-                font-weight: bold;
-            }
 
-            .albumcovertextsmall{
-                font-size:13px; 
-                font-weight: 600;
-                color:rgb(207, 207, 207);
-            }
-            .covertextbox{
-                margin-top:auto;
-            }
-            .coverbox{
-                display: flex;
-                flex-direction: row;
-            }
+                .bohemian{
+                    max-width: 240px;
+                    max-height: 240px;
+                    padding: 0;
+                    border:none;
+                    margin-left: 30px;
+                    box-shadow: 0 4px 60px rgb(0 0 0 / 50%);
+                    margin-right: 30px;
+                    float:left;
+                    margin-top:auto;
+                    margin-bottom: 25px;
+                    
+                }
+                .albumcovertext{
+                    color:white;
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 900;
+                }
 
-            .albumtableheader{
-                color:rgb(173, 173, 173);
-                font-size: 12px;
-           
-            }
+                .albumcovertextsmall{
+                    font-size:13px; 
+                    font-weight: 600;
+                    color:rgb(207, 207, 207);
+                }
+                .covertextbox{
+                    margin-top:auto;
+                    margin-bottom: 25px;
+                    
+                }
+                .coverbox{
+                    display: flex;
+                    flex-direction: row;
+                }
+
+                .albumtableheader{
+                    color:rgb(173, 173, 173);
+                    font-size: 12px;
+            
+                }
          
 
-            .titletext{
-                font-weight:bold;
-                color:white;
-                font-size:15px;
-            }
+                .titletext{
+                    font-weight:500;
+                    color:white;
+                    font-size:15px;
+                }
 
-            .alttext{
-                color:rgb(156, 156, 156);
-                text-align:center;
-                font-size:14px;
-                font-weight: 600;
-            }
+                .alttext{
+                    color:rgb(156, 156, 156);
+                    text-align:center;
+                    font-size:14px;
+                    font-weight: 600;
+                }
+                .tablenumbers{
+                    color:rgb(156, 156, 156);
+                    text-align:center;
+                    font-size:14px;
+                    font-weight: 600;
+                    line-height: 40px;
+                      
+                }
+                .table td, .table th{
+                    border-top:none;
+                }
+                .table thead th{
+                    border-bottom: 1px solid #5e5e5e73;
+                    padding-bottom: 8px;
+                }
 
-            .table td, .table th{
-                border-top:none;
-            }
-            .table thead th{
-                border-bottom: 1px solid #979797;
-                padding-bottom: 8px;
-            }
+                .playbutton{
+                    position: relative;
+                    width: 55px;
+                    height: 55px;
+                    background-color: rgb(65, 155, 65);
+                    border-radius:50%;
+                }
 
-            .playbutton{
-                width: 50px;
-                height: 50px;
-                background-color: rgb(65, 155, 65);
-                border-radius:50%;
-            }
+                .playicon{
+                position:absolute;  
+                top:18px;
+                left:19px;
+                }
+
+                .bodycontent{
+                    background: rgb(66,23,54);
+                    background: linear-gradient(180deg, rgba(66,23,54,0.9108018207282913) 10%, rgba(66,23,54,0.24693627450980393) 24%, rgba(66,23,54,0.036852240896358524) 35%, rgba(66,23,54,0) 45%);
+                    padding:0;
+                    display:flex;
+                    flex-direction: column;
+                    width:87vw;
+                    margin: 0;
+                    padding-top:25px;
+                    padding-left:30px;
+                }
+
+                .queensmallImg{
+                  width: 25px;
+                  height:25px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                  margin-right:3px;
+                }
     </style>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   </head>
@@ -694,7 +710,7 @@ body{
       </div>
 
       <ul class="sidebar-nav flex-column">
-        <li class="sidelistcurrent"><a class="navitem" href="#"><span class="iconify mr-3" data-icon="el:home" data-inline="false" data-width="20px" data-height="20px"></span>Home</a></li>
+        <li class="sidelist"><a class="navitem" href="#"><span class="iconify mr-3" data-icon="el:home" data-inline="false" data-width="20px" data-height="20px"></span>Home</a></li>
         <li class="sidelist"><a class="navitem" href="#"><span class="iconify mr-3" data-icon="akar-icons:search" data-inline="false" data-width="20" data-height="20"></span>Search</a></li>
         <li class="sidelist"><a class="navitem" href="#"><img style="height: 24px; width: 24px; margin:0; margin-right:12px;" src="libraryicon.svg" alt="Library Icon" />Your Library</a></li>
         <br />
@@ -760,93 +776,154 @@ body{
     </div>
 
 
-    <div class="container-fluid mainbackground"></div>
-    <div class="container-fluid mainbackground2"></div>
-
     <div class="container-fluid mainbody">
-        <div class="navbar-fixed-top ml-2">
-          <div class="navcontent">
-            <div class="arrows">
-              <div class="circle mr-3">
-                <div class="arrow left">
+        
 
+        <div class="container-fluid covercontent">
+
+                <!-- NAVBAR -->
+
+            <div class="navbar-fixed-top ml-2">
+                <div class="navcontent">
+                  <div class="arrows">
+                    <div class="circle mr-3">
+                      <div class="arrow left">
+      
+                      </div>
+                    </div>
+                    <div class="circle">
+                      <div class="arrow right">
+      
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="useraccount">
+                    <span class="iconify personimage" data-icon="bi:person-circle" data-inline="false" data-width="26" data-height="26"></span>
+                    <span class="persontext">User Name</span>
+                    <span class="iconify downarrow" data-icon="bx:bxs-down-arrow" data-inline="true" style="color: white;" data-width="10" data-height="10"></span>
+                  </div>
                 </div>
+                                  
               </div>
-              <div class="circle">
-                <div class="arrow right">
-
-                </div>
-              </div>
-            </div>
-
-            <div class="useraccount">
-              <span class="iconify personimage" data-icon="bi:person-circle" data-inline="false" data-width="26" data-height="26"></span>
-              <span class="persontext">User Name</span>
-              <span class="iconify downarrow" data-icon="bx:bxs-down-arrow" data-inline="true" style="color: white;" data-width="10" data-height="10"></span>
-            </div>
-          </div>
-          
-          
-            
-        </div>
-
-        <div class="container-fluid bodycontent pl-4">
                 
+
+
           <div class="container-fluid p-0 coverbox" >
             <img src="/Bohemian_Rhapsody_album.jpg" class="img-fluid bohemian" alt="Bohemian Rhapsody Album Cover">
             <div class="covertextbox">
-                <h5 class="albumcovertext" style="font-size:13px;">ALBUM</h5>
-                <h1 class="albumcovertext">Bohemian Rhapsody (The Original Soundtrack)</h1>
-                <span class="albumcovertext mr-2" style="font-size:13px;">Queen</span><span class="albumcovertextsmall">• 2018 • 22 songs, 1 hr 19 min</span>
+                <h5 class="albumcovertext" style="font-size:13px; font-weight:700;">ALBUM</h5>
+                <h1 class="albumcovertext" style="letter-spacing: -1px;">Bohemian Rhapsody (The Original Soundtrack)</h1>
+                <span style="padding-right:3px; padding-top: 3px; display:inline-block;"><img class="queensmallImg" src="/queenband.jfif"></img></span>
+                <span class="albumcovertext mr-2" style="font-size:13px; font-weight:700;">Queen</span><span class="albumcovertextsmall">• 2018 • 22 songs, 1 hr 19 min</span>
             </div>
        
           </div>
 
-           
-        
+        </div>
+
+        <div class="container-fluid bodycontent">
+
+            <div class="container-fluid p-0 mb-3 d-flex">
+                <div class="playbutton d-inline-block mr-4">
+                  <span class="iconify playicon" data-icon="el:play" data-inline="false" style="color: white;" data-width="22" data-height="22"></span>
+                </div>
+                <span class="iconify mr-4 ml-2" data-icon="teenyicons:heart-outline" data-inline="false" style="color: rgb(150, 150, 150); margin-top: auto; margin-bottom:auto;" data-width="28" data-height="28"></span>
+                <span class="iconify ml-2" data-icon="bx:bx-dots-horizontal-rounded" data-inline="false" style="color: rgb(150, 150, 150); margin-top: auto; margin-bottom:auto;" data-width="28" data-height="28"></span>
             </div>
-         <br/>
-         <div class="playbutton"></div>
-         <br/>
+            
 
-   <div class="container-fluid">
 
-   </div>
-          <div class="table-responsive ml-2">
-            <table class="table table-hover">
-                <caption style="font-size: 11px; color:rgb(153, 153, 153);">© 2018 Queen Productions Ltd, under exclusive licence to Universal International Music BV
-                    <br/>
-                    ℗ A Virgin Records Release; This Compilation ℗ 2018 Queen Productions Ltd, under exclusive licence to Universal International Music BV</caption>
-                <thead class="albumtableheader">
-                  <tr>
-                    <th scope="col" style="width:30px; font-size: 16px; padding-bottom: 5px;">#</th>
-                    <th scope="col" style="width:90%;">TITLE</th>
-                    <th scope="col" style="text-align: center;"><span class="iconify" data-icon="fluent:clock-28-regular" data-inline="false" style="color: rgb(184, 184, 184);" data-width="16" data-height="16"></span></th>
-                  </tr>
-                </thead>
-                <tbody class="">
-                  <tr>
-                    <th scope="row" class="alttext" style="padding-top:35px;">1</th>
-                    <td class="titletext" style="padding-top:35px;">20th Century Fox Fanfare <br/> <span class="alttext">Queen</span></td>
-                    <td class="alttext" style="padding-top:35px;">0:25</td>
-                  </tr>
-                  <tr>
-                    <th class="alttext" scope="row">2</th>
-                    <td class="titletext">Somebody To Love <br/> <span class="alttext">Queen</span></td>
-                    <td class="alttext">4:55</td>
-                  </tr>
-                  <tr>
-                    <th class="alttext" scope="row">3</th>
-                    <td class="titletext">Doing All Right - ...Revisited <br/> <span class="alttext">Smile</span></td>
-                    <td class="alttext">3:16</td>
-                  </tr>
-                </tbody>
 
-            </table>
-          </div>
-        
+            <div class="table-responsive pr-5">
+              <table class="table table-hover">
+                  <caption style="font-size: 11px; color:rgb(153, 153, 153);">© 2018 Queen Productions Ltd, under exclusive licence to Universal International Music BV
+                      <br/>
+                      ℗ A Virgin Records Release; This Compilation ℗ 2018 Queen Productions Ltd, under exclusive licence to Universal International Music BV</caption>
+                  <thead class="albumtableheader">
+                    <tr>
+                      <th scope="col" style="width:30px; font-size: 16px; padding-bottom: 5px;">#</th>
+                      <th scope="col" style="width:90%;">TITLE</th>
+                      <th scope="col" style="text-align: center;"><span class="iconify" data-icon="fluent:clock-28-regular" data-inline="false" style="color: rgb(184, 184, 184);" data-width="16" data-height="16"></span></th>
+                    </tr>
+                  </thead>
+                  <tbody class="">
+                    <tr>
+                      <th scope="row" class="tablenumbers" style="padding-top:30px;">1</th>
+                      <td class="titletext" style="padding-top:30px;">20th Century Fox Fanfare <br/> <span class="alttext">Queen</span></td>
+                      <td class="alttext" style="padding-top:30px;">0:25</td>
+                    </tr>
+                    <tr>
+                      <th class="tablenumbers" scope="row">2</th>
+                      <td class="titletext">Somebody To Love <br/> <span class="alttext">Queen</span></td>
+                      <td class="alttext">4:55</td>
+                    </tr>
+                    <tr>
+                      <th class="tablenumbers" scope="row">3</th>
+                      <td class="titletext">Doing All Right - ...Revisited <br/> <span class="alttext">Smile</span></td>
+                      <td class="alttext">3:16</td>
+                    </tr>
+                    <tr>
+                        <th class="tablenumbers" scope="row">2</th>
+                        <td class="titletext">Keep Yourself Alive - Live At The Rainbow <br/> <span class="alttext">Queen</span></td>
+                        <td class="alttext">3:56</td>
+                      </tr>
+                    <tr>
+                        <th class="tablenumbers" scope="row">2</th>
+                        <td class="titletext">Killer Queen<br/> <span class="alttext">Queen</span></td>
+                        <td class="alttext">2:59</td>
+                      </tr>
+                    <tr>
+                        <th class="tablenumbers" scope="row">2</th>
+                        <td class="titletext">Fat Bottomed Girls - Live In Paris<br/> <span class="alttext">Queen</span></td>
+                        <td class="alttext">4:37</td>
+                      </tr>
+                    <tr>
+                        <th class="tablenumbers" scope="row">2</th>
+                        <td class="titletext">Bohemian Rhapsody<br/> <span class="alttext">Queen</span></td>
+                        <td class="alttext">5:54</td>
+                      </tr>
+                    <tr>
+                        <th class="tablenumbers" scope="row">2</th>
+                        <td class="titletext">Now I'm Here- Live At The Hammersmith Odeon<br/> <span class="alttext">Queen</span></td>
+                        <td class="alttext">4:25</td>
+                      </tr>
+                    <tr>
+                        <th class="tablenumbers" scope="row">2</th>
+                        <td class="titletext">Crazy Little Thing Called Love<br/> <span class="alttext">Queen</span></td>
+                        <td class="alttext">2:43</td>
+                      </tr>
+                    <tr>
+                        <th class="tablenumbers" scope="row">2</th>
+                        <td class="titletext">Love Of My Life - Live At Rock In Rio<br/> <span class="alttext">Queen</span></td>
+                        <td class="alttext">4:28</td>
+                      </tr>
+                    <tr>
+                        <th class="tablenumbers" scope="row">2</th>
+                        <td class="titletext">We Will Rock You - Movie Mix<br/> <span class="alttext">Queen</span></td>
+                        <td class="alttext">2:09</td>
+                      </tr>
+                    <tr>
+                        <th class="tablenumbers" scope="row">2</th>
+                        <td class="titletext">Another One Bites The Dust<br/> <span class="alttext">Queen</span></td>
+                        <td class="alttext">3:34</td>
+                      </tr>
+                    <tr>
+                        <th class="tablenumbers" scope="row">2</th>
+                        <td class="titletext">I Want To Break Free<br/> <span class="alttext">Queen</span></td>
+                        <td class="alttext">3:43</td>
+                      </tr>
+                  </tbody>
+  
+              </table>
+           
+        </div>
+          
+
 
     </div>
+
+
   </div>
 
 
