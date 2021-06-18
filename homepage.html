@@ -38,7 +38,10 @@ body{
         display: flex;
          flex-direction: column;
          height: 100%;
-         min-width: 13vw;
+         /* min-width: 13vw; */
+         width:35%;
+         /* min-width: 23vw; */
+         
         
       }
       .logo {
@@ -48,6 +51,9 @@ body{
         margin-bottom: 25px;
       }
 
+      .sidebar-brand{
+        /* overflow-y:hidden */
+      }
       .sidebar-nav {
         list-style-type: none;
         padding: 0;
@@ -201,7 +207,8 @@ body{
           padding-left:0;
             margin-left:0;
             overflow:auto;
-            padding-right:10px;;
+            padding-right:10px;
+            overflow-x:hidden;
            }
         
         .morningtext{
@@ -213,14 +220,17 @@ body{
         }
 
         .card{
-            background-color: rgba(124, 124, 124, 0.3);
+            background-color: rgba(124, 124, 124, 0.3);  
+        }
+
+        .card:hover{
+          background-color: rgba(155, 155, 155, 0.3);  
         }
 
         .card-body{
            color:white;
            font-weight:bold;
            padding-left: 0px;
-           padding-right: 35px;
            font-size: 14px;
            display: flex;
            height:100%;
@@ -277,12 +287,21 @@ body{
           padding-top: 1.5vh;
           padding-left: 2.3vh;
           z-index: 4;
-          width:83%;
+          width:84%;
           padding-bottom: 50px;
         }
 
         .bodycontent{
-          margin-top: 75px;
+          background: rgb(61,7,7);
+            background: linear-gradient(180deg, rgba(61,7,7,1) 36%, rgba(61,7,7,0.7679446778711485) 51%, rgba(165,153,221,0) 100%);
+            padding:0;
+            display:flex;
+              flex-direction: column;
+              width:100%;
+              margin: 0;
+            padding-top:25px;
+              padding-left:30px;
+              margin-right: -10px;
         }
 
         .useraccount{
@@ -295,11 +314,10 @@ body{
         }
 
         .navcontent{
-          width:80vw;
+          width:96%;
           display: flex;
           justify-content: space-between;
           flex-direction: row;
-         
         }
 
         .personimage{
@@ -319,16 +337,7 @@ body{
 
         .morningcard{
           border: 0;
-        }
-        
-        .morningimg{
-          height: 100%;
-          object-fit:cover;
-          max-height:80px;
-          min-height: 80px;
-          /* max-width:80px; */
-
-        }
+        } 
 
         .card-text{
         max-height: 40px;
@@ -373,7 +382,12 @@ body{
 
         }
 
-        
+        /* .container{
+          width: auto;
+        } */
+        .container-fluid{
+          width:auto;
+        }
 
 
         /* Max's Footer CSS */
@@ -410,14 +424,13 @@ body{
 
             .footerp{
                 font-size:0.8rem;
-
+              margin-bottom:0;
             }
 
             .music-controls{
-                /* padding:1rem; */
+              padding: 0;
                 height:9.5vh;
                 position:fixed;
-                padding-top:6px;
                 left: 0;
                 bottom: 0;
                 width: 100%;
@@ -425,17 +438,20 @@ body{
                 border-top: 1px solid #282828;
             }
             .m-controls_album-image{
-                /* border:white 0.5px solid; */
+                margin-top:auto;
+                margin-bottom:auto;
+                padding-right: 0;
             }
 
             .m-controls_album-image img{
-                width:55%;
-
+                width:60px;
             }
 
             .m-controls_album-artist_title {
                 padding:0.5rem;
-
+                margin-top: auto;
+                margin-bottom: auto;
+              padding-left:0;
             }
 
             .m-controls_album-artist_title h6{
@@ -460,11 +476,18 @@ body{
 
             }
 
+            .music-controls-row{
+              padding:0;
+              margin:auto;
+              margin-top: 0.7rem;
+
+            }
 
 
             .m-controls_like{
-                margin-top: 1rem;
-              /*border:2px white solid;*/
+                margin-top: auto;
+                margin-bottom:auto;
+              /* border:2px white solid; */
             }
 
             .m-controls_like i{
@@ -477,9 +500,6 @@ body{
                 margin:0 auto;
                 align-content: space-between;
                 padding-right:2rem;
-
-
-
             }
 
             .m-controls_controls ul{
@@ -490,11 +510,15 @@ body{
 
             .m-controls_controls li{
                 margin-left: 0.3rem;
+                margin-top:auto;
+                margin-bottom:auto;
             }
 
             .m-controls_controls li i{
                 color:white;
                 padding:1rem;
+                margin-top:auto;
+                margin-bottom:auto;
             }
 
             .music-controls_controls{
@@ -505,24 +529,22 @@ body{
             }
 
             #play{
-                height:45px;
-                width:45px;
+                height:32px;
+                width:32px;
                 background-color: white;
                 border-radius: 50px;
                 position:relative;
-                margin-right:1rem;
 
 
             }
 
             .play_triangle{
                 border-style:solid;
-                border-width:9px 0px 9px 14px;
+                border-width:7px 0px 7px 11px;
                 border-color:transparent transparent transparent black;
                 position:absolute;
-                top:14px;
-                left:17.2px;
-              
+                top:9px;
+                left:12px;
             }
 
             .play-hover{
@@ -540,7 +562,8 @@ body{
             }
 
             .m-controls_duration{
-                padding-bottom:1.2rem;
+                padding-bottom:0.6rem;
+                padding-top: 0.4rem;
 
             }
 
@@ -555,7 +578,7 @@ body{
 
 
             .m-controls-extra{
-                padding-top:1rem;
+                padding-top:1.5rem;
                 padding-right:2rem;
             }
 
@@ -602,16 +625,38 @@ body{
 
             .card-title{
             font-size: 15px;
-            text-align: center;
-        }
+            margin-left:6px;
+            font-weight:bold;
+            
+            
+              }
+                        .test {
+                  justify-content: center;
+                }
 
-            .grid2{
-            border-top-left-radius: calc(1rem - 1px);
-            border-top-right-radius: calc(1rem - 1px);
-            border-bottom-right-radius: calc(1rem - 1px);
-            border-bottom-left-radius: calc(1rem - 1px);
-        }
+                .test-img {
+                  height: 500px;
+                  width: auto;
+                }
+                
+                      @media (min-width:1425px) {
+            .xxlGrid {
+              display: block !important;
+            }
+          }
 
+          .bg-customdark{
+            background-color: #1b1b1b;
+          }
+
+          .bg-customdark:hover{
+            background-color: #414141;
+          }
+
+          a.custom-card,
+          a.custom-card:hover {
+            color: inherit;
+          }
 
     </style>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
@@ -633,7 +678,7 @@ body{
 
     <div class="sidebar">
       <div class="sidebar-brand">
-        <a href="#"><img src="spotifylogo.svg" alt="Spotify Logo" class="logo"></a>
+        <a href="/index.html"><img src="spotifylogo.svg" alt="Spotify Logo" class="logo"></a>
       </div>
 
       <ul class="sidebar-nav flex-column">
@@ -699,7 +744,6 @@ body{
     </div>
 
 
-    <div class="container-fluid mainbackground"></div>
 
     <div class="container-fluid mainbody">
       <div class="stickynav">
@@ -717,7 +761,7 @@ body{
             </div>
           </div>
 
-          <div class="useraccount">
+          <div class="useraccount d-none d-lg-block">
             <span class="iconify personimage" data-icon="bi:person-circle" data-inline="false" data-width="26" data-height="26"></span>
             <span class="persontext">User Name</span>
             <span class="iconify downarrow" data-icon="bx:bxs-down-arrow" data-inline="true" style="color: white;" data-width="10" data-height="10"></span>
@@ -729,12 +773,12 @@ body{
       </div>
 
         <div class="container-fluid bodycontent pl-4">
-        <p class="morningtext">Good morning</p>
+        <p class="morningtext mt-5">Good morning</p>
            
     
 
          
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-5">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-5" style="margin-right:15px; padding-right:15px;">
             <div class="col pr-2">
             <div class="card morningcard mb-3">
               <div class="row no-gutters">
@@ -883,248 +927,250 @@ body{
         <div class="container-fluid mt-5">
 
           <section>
-  
-              <div class=" d-flex align-items-center justify-content-between">
-                  <h5 class="font-weight-bold text-white ">Recently played</h5>
-                  <small class="text-white font-weight-bold text-muted">SEE ALL</small>
-              </div>
-      
-  
-              <div class="row row-cols-lg-auto text-white mt-3">
-                  <div class="col mb-4">
-                      <div class="card p-2 bg-dark">
-                          <img src="https://picsum.photos/100" class="card-img-top" alt="...">
-                          <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"></p>
-                          </div>
-                      </div>
-                  </div>
-  
-                  <div class="col mb-4">
-                      <div class="card p-2 bg-dark">
-                          <img src="https://picsum.photos/100" class="card-img-top" alt="...">
-                          <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"></p>
-                          </div>
-                      </div>
-                  </div>
-  
-                  <div class="col mb-4 d-none d-sm-block">
-                      <div class="card p-2 bg-dark">
-                          <img src="https://picsum.photos/100" class="card-img-top" alt="...">
-                          <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"></p>
-                          </div>
-                      </div>
-                  </div>
-  
-                  <div class="col mb-4 d-none d-sm-block">
-                      <div class="card p-2 bg-dark">
-                          <img src="https://picsum.photos/100" class="card-img-top" alt="...">
-                          <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"></p>
-                          </div>
-                      </div>
-                  </div>
-  
-                  <div class="col mb-4 d-none d-md-block">
-                      <div class="card p-2 bg-dark">
-                          <img src="https://picsum.photos/100" class="card-img-top" alt="...">
-                          <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"></p>
-                          </div>
-                      </div>
-                  </div>
-  
-                  <div class="col mb-4 d-none d-md-block">
-                      <div class="card p-2 bg-dark">
-                          <img src="https://picsum.photos/100" class="card-img-top" alt="...">
-                          <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"></p>
-                          </div>
-                      </div>
-                  </div>
-  
-                  <div class="col mb-4 d-none d-lg-block">
-                      <div class="card p-2 bg-dark">
-                          <img src="https://picsum.photos/100" class="card-img-top" alt="...">
-                          <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"></p>
-                          </div>
-                      </div>
-                  </div>
-  
-                  <div class="col d-none d-xl-block">
-                      <div class="card p-2 bg-dark">
-                          <img src="https://picsum.photos/100" class="card-img-top" alt="...">
-                          <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"></p>
-                          </div>
-                      </div>
-                  </div>
-  
-              </div>
-  
-          </section>
-  
-          <section>
-  
-              <div class="d-flex align-items-center justify-content-between">
-  
-                  <h5 class="font-weight-bold text-white">Shows to try</h5>
-                  <small class="text-white font-weight-bold text-muted">SEE ALL</small>
-  
-              </div>
-              <small class="text-white font-weight-bold vw-100">Podcasts we think you'll get hooked on.</small>
-  
-      
-              <div class="row row-cols-lg-auto text-white mt-3 ">
-                  <div class="col mb-4">
-                      <div class="card p-2 bg-dark">
-                          <img src="https://picsum.photos/100" class="card-img-top grid2" alt="...">
-                          <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"></p>
-                          </div>
-                      </div>
-                  </div>
-      
-                  <div class="col mb-4">
-                      <div class="card p-2 bg-dark">
-                          <img src="https://picsum.photos/100" class="card-img-top grid2" alt="...">
-                          <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"></p>
-                          </div>
-                      </div>
-                  </div>
-      
-                  <div class="col mb-4 d-none d-sm-block">
-                      <div class="card p-2 bg-dark">
-                          <img src="https://picsum.photos/100" class="card-img-top grid2" alt="...">
-                          <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"></p>
-                          </div>
-                      </div>
-                  </div>
-      
-                  <div class="col mb-4 d-none d-sm-block">
-                      <div class="card p-2 bg-dark">
-                          <img src="https://picsum.photos/100" class="card-img-top grid2" alt="...">
-                          <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"></p>
-                          </div>
-                      </div>
-                  </div>
-      
-                  <div class="col mb-4 d-none d-md-block">
-                      <div class="card p-2 bg-dark">
-                          <img src="https://picsum.photos/100" class="card-img-top grid2" alt="...">
-                          <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"></p>
-                          </div>
-                      </div>
-                  </div>
-      
-                  <div class="col mb-4 d-none d-md-block">
-                      <div class="card p-2 bg-dark">
-                          <img src="https://picsum.photos/100" class="card-img-top grid2" alt="...">
-                          <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"></p>
-                          </div>
-                      </div>
-                  </div>
-      
-                  <div class="col mb-4 d-none d-lg-block">
-                      <div class="card p-2 bg-dark">
-                          <img src="https://picsum.photos/100" class="card-img-top grid2" alt="...">
-                          <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"></p>
-                          </div>
-                      </div>
-                  </div>
-      
-                  <div class="col d-none d-xl-block">
-                      <div class="card p-2 bg-dark">
-                          <img src="https://picsum.photos/100" class="card-img-top grid2" alt="...">
-                          <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"></p>
-                          </div>
-                      </div>
-                  </div>
-      
-              </div>
-  
-      </div>
-    </div>
-  </div>
 
-  
-  <section class="music-controls container-fluid justify-content-center">
-    <div class="row music-controls-row justify-content-center;">
-        <div class="col col-lg-1 m-controls_album-image">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpKTAXHEgak92e3DVFrGplVV23I2KRShQInV3WBRU&usqp=CAE&s" alt="album image">
-        </div>
-        <div class= "col col-lg-1 m-controls_album-artist_title">
-            <h6>Song Title</h6>
-            <p class="footerp">Artist</p>
-        </div>
-        <div class="col col-lg-1 m-controls_like">
-            <i class="bi bi-heart"></i>
-            <i class="bi bi-bounding-box-circles"></i>
-        </div>
-        <div class="col col-lg-5 music-controls_controls">
-            <div class="m-controls_controls">
-                <ul>
-                    <li class="footerli"><i class="bi bi-shuffle"></i>
-                    </li>
-                    <li class="footerli"><i class="bi bi-skip-start-fill"></i>
-                    </i>
-                    </li>
-    
-                    <li id="play" class="grow footerli"><div class="play_triangle"></div>
-                    </li><i class="bi bi-skip-end-fill"></i>
-                   
-    
-                    <li class="footerli">
-                    </li>
-                    <li class="footerli"><i class="bi bi-arrow-repeat"></i></li>
-                </ul>
+            <div class=" d-flex align-items-center justify-content-between">
+              <h5 class="font-weight-bold text-white ">Recently played</h5>
+              <small class="text-white font-weight-bold text-muted">SEE ALL</small>
             </div>
-            <div class="m-controls_duration">
-                <hr>
+    
+    
+            <div class="row row-cols-lg-auto text-white mt-3">
+              <div class="col mb-4">
+                <a href="/albumpage.html" class="custom-card">
+                <div class="card p-2 bg-customdark">
+                  <img src="/Bohemian_Rhapsody_album.jpg" class="card-img-top" alt="...">
+                  <div class="card-body" style="max-height:70px;">
+                    <span class="card-title">Bohemian Rhapsody</span>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </a>
+              </div>
+     
+              <div class="col mb-4">
+                <a href="/artistpage.html" class="custom-card">
+                <div class="card p-2 bg-customdark">
+                  <img src="/200defleppard-optical.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Artist Name</h5>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </a>
+              </div>
+    
+              <div class="col mb-4 d-none d-md-block">
+                <div class="card p-2 bg-customdark">
+                  <img src="https://picsum.photos/100" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Artist Name</h5>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col mb-4 d-none d-lg-block">
+                <div class="card p-2 bg-customdark">
+                  <img src="https://picsum.photos/100" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Artist Name</h5>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col mb-4 d-none d-lg-block">
+                <div class="card p-2 bg-customdark">
+                  <img src="https://picsum.photos/100" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Artist Name</h5>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col mb-4 d-none d-xl-block">
+                <div class="card p-2 bg-customdark">
+                  <img src="https://picsum.photos/100" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Artist Name</h5>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col mb-4 d-none xxlGrid">
+                <div class="card p-2 bg-customdark">
+                  <img src="https://picsum.photos/100" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Artist Name</h5>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col d-none xxlGrid">
+                <div class="card p-2 bg-customdark">
+                  <img src="https://picsum.photos/100" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Artist Name</h5>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+    
             </div>
-        </div>
-        <div class="col col-lg-4 m-controls-extra d-flex justify-content-end">
-            <ul>
-                <li class="footerli"><i class="bi bi-justify-left"></i>
-                </li>
-                <li class="footerli"><i class="bi bi-phone"></i>
-                </li>
-                <li class="footerli"><i class="bi bi-volume-up"></i>
-                </li>
-                <li class="footerli"><input type="range" min="1" max="100" value="50" class="slider" id="volumeControl">
-                </li>
-                <li class="footerli"><i class="bi bi-arrows-angle-expand"></i>
-                </li>
-            </ul>
-        </div>
-    </div>    
-    </section>
+    
+          </section>
+    
+          <section>
+    
+            <div class="d-flex align-items-center justify-content-between">
+    
+              <h5 class="font-weight-bold text-white">Shows to try</h5>
+              <small class="text-white font-weight-bold text-muted">SEE ALL</small>
+    
+            </div>
+            <small class="text-white font-weight-bold vw-100">Podcasts we think you'll get hooked on.</small>
+    
+    
+            <div class="row row-cols-lg-auto text-white mt-3 ">
+              <div class="col mb-4">
+                <div class="card p-2 bg-customdark">
+                  <img src="https://picsum.photos/100" class="card-img-top grid2" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Artist Name</h5>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col mb-4">
+                <div class="card p-2 bg-customdark">
+                  <img src="https://picsum.photos/100" class="card-img-top grid2" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Artist Name</h5>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col mb-4 d-none d-md-block">
+                <div class="card p-2 bg-customdark">
+                  <img src="https://picsum.photos/100" class="card-img-top grid2" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Artist Name</h5>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col mb-4 d-none d-lg-block">
+                <div class="card p-2 bg-customdark">
+                  <img src="https://picsum.photos/100" class="card-img-top grid2" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Artist Name</h5>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col mb-4 d-none d-lg-block">
+                <div class="card p-2 bg-customdark">
+                  <img src="https://picsum.photos/100" class="card-img-top grid2" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Artist Name</h5>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col mb-4 d-none d-xl-block">
+                <div class="card p-2 bg-customdark">
+                  <img src="https://picsum.photos/100" class="card-img-top grid2" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Artist Name</h5>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col mb-4 d-none xxlGrid">
+                <div class="card p-2 bg-customdark">
+                  <img src="https://picsum.photos/100" class="card-img-top grid2" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Artist Name</h5>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col d-none xxlGrid">
+                <div class="card p-2 bg-customdark">
+                  <img src="https://picsum.photos/100" class="card-img-top grid2" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Artist Name</h5>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+    
+            </div>
+          </section>
+          <section class="music-controls container-fluid justify-content-center">
+            <div class="row music-controls-row justify-content-center;">
+                <div class="col col-lg-1 m-controls_album-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpKTAXHEgak92e3DVFrGplVV23I2KRShQInV3WBRU&usqp=CAE&s" alt="album image">
+                </div>
+                <div class= "col col-lg-1 m-controls_album-artist_title">
+                    <h6>Holding On</h6>
+                    <p class="footerp">Technimatic</p>
+                </div>
+                <div class="col col-lg-1 m-controls_like">
+                    <i class="bi bi-heart"></i>
+                    <i class="bi bi-bounding-box-circles"></i>
+                </div>
+                <div class="col col-lg-5 music-controls_controls">
+                    <div class="m-controls_controls">
+                        <ul class="d-flex">
+                            <li class="footerli"><i class="bi bi-shuffle"></i>
+                            </li>
+                            <li class="footerli"><i class="bi bi-skip-start-fill"></i>
+                            </i>
+                            </li>
+            
+                            <li id="play" class="grow footerli"><div class="play_triangle"></div>
+                            </li>
+                            <li class="footerli"><i class="bi bi-skip-end-fill"></i>
+                            </i>
+                            </li>
+                           
+            
+                            <li class="footerli">
+                            </li>
+                            <li class="footerli"><i class="bi bi-arrow-repeat"></i></li>
+                        </ul>
+                    </div>
+                    <div class="m-controls_duration">
+                        <hr>
+                    </div>
+                </div>
+                <div class="col col-lg-4 m-controls-extra d-flex justify-content-end">
+                    <ul>
+                        <li class="footerli"><i class="bi bi-justify-left"></i>
+                        </li>
+                        <li class="footerli"><i class="bi bi-phone"></i>
+                        </li>
+                        <li class="footerli"><i class="bi bi-volume-up"></i>
+                        </li>
+                        <li class="footerli"><input type="range" min="1" max="100" value="50" class="slider" id="volumeControl">
+                        </li>
+                        <li class="footerli"><i class="bi bi-arrows-angle-expand"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>    
+            </section>
 
   </body>
 </html>
